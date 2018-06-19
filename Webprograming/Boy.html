@@ -7,7 +7,7 @@
 		<title>Boy's</title>
 		<link rel="shortcut icon" href="picture/title.png">
 		<link rel="stylesheet" href="css/girlstyle.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 		
 		<link rel="stylesheet" href="button/css/buttons.css">
 		<script src="button/js/buttons.js"></script>
@@ -67,11 +67,12 @@
 		.fdiv{
 			width: 130px;
 			height: 5px; 
-			border: 1px solid; 
+			 
 			position: absolute;
 			left: 133px;
 			top: 476px;
 			z-index : 5;
+
 		}
 		
 		.longdiv{
@@ -98,8 +99,8 @@
 			height: 5px; 
 			
 			position: absolute;
-			left: 112px;
-			top: 224px;
+			left: 133px;
+			top: 476px;
 			z-index : 1;
 		}
 		
@@ -128,10 +129,10 @@
 	<script>
 		var pictop = [ "班 服", "短袖灰"];
 		var picleg = [ "長牛仔", "迷彩褲" ];
-		var picshoe = [  ];
+		var picshoe = [ "黃布鞋", "藍布鞋"];
 		var piccoat = [ "無東西", "紅外套", "藍外套", "灰大衣"];
 		var piclong = [  ];
-		var picsock = [ "無東西" ];
+		var picsock = [ "無東西", "白短襪"];
 		
 		var topadded = 0;
 		var pantadded = 0;
@@ -327,8 +328,7 @@
 					}
 				})
 				
-				var suit = Math.floor( 1 + Math.random() * 2 );
-			
+				var suit = 1;
 				if(suit==1)
 				{
 					var ltop = pictop.length;
@@ -358,7 +358,7 @@
 					if(rcoat!=0)
 						$("#dressed").append('<p id = "on' + piccoat[rcoat] + '">' + piccoat[rcoat] + '</p>');
 					
-					$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+					$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
 					if(rsock!=0)
 					{
 						$("#dressed").append('<p id = "on' + picsock[rsock] + '">' + picsock[rsock] + '</p>');
@@ -406,7 +406,7 @@
 						if(rcoat!=0)
 							$("#dressed").append('<p id = "on' + piccoat[rcoat] + '">' + piccoat[rcoat] + '</p>');
 						
-						$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+						$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
 						if(rsock!=0)
 							$("#dressed").append('<p id = "on' + picsock[rsock] + '">' + picsock[rsock] + '</p>');
 					}
@@ -471,7 +471,7 @@
 			}
 			else if(id.indexOf("sock")!=-1)
 			{
-				$("#sock").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; top: 0px; left:0px;">');
+				$("#sock").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; bottom: 0px; left:0px;">');
 				$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
 			}
 		});
@@ -497,7 +497,7 @@
 				<nav>
 					<ul class="cd-bouncy-nav">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="girl.html">Girl's</a></li>
+						<li><a href="boy.html">boy's</a></li>
 						<li><a href="information.html">Info</a></li>
 						<li><a href="Video.html">Video</a></li>
 						<li><a href="Store.html">Store</a></li>
@@ -515,7 +515,7 @@
 		<div style = "width: 100hv; height: 100hv; float:left; padding: 5px; position:absolute; top: 20px; left: 20px;">
 			<button class="button button-border-primary button-rounded" id = "top">Tops</button><br><br>
 			<button class="button button-border-primary button-rounded" id = "coats">Coats</button><br><br>
-			<button class="button button-border-primary button-rounded" id = "suit">Dress</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "suit">Suit</button><br><br>
 			<button class="button button-border-primary button-rounded" id = "pants">Pants</button><br><br>
 			<button class="button button-border-primary button-rounded" id = "socks">Sock</button><br><br>
 			<button class="button button-border-primary button-rounded" id = "shoes">Shoes</button><br><br>
