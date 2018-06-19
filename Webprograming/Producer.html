@@ -20,17 +20,48 @@
 			background-position: center;
 			background-size: cover;
 		}
+		.button {
+		    background-color: hotpink; /* Green */
+		    border: none;
+		    color: white;
+		    padding: 20px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		}
+
+.button3 {border-radius: 8px;}
 	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#wrapper1").show();
+			$("#wrapper2").hide();
+    		$("#button1").click(function(){
+    			$("#wrapper1").show();
+        		$("#wrapper2").hide();
+    		});
+    		$("#button2").click(function(){
+        		$("#wrapper1").hide();
+        		$("#wrapper2").show();
+    		});
+		});
+	</script>
+
 	<body>
-		<h1>Producer</h1>
 		<div class="sucaihuo-container">
 			<section class="cd-section">
 				<a class="cd-bouncy-nav-trigger" href="#0">MENU</a>
 			</section> 
-
+			<button class="button button3" id = "button1">Author1</button>
+			<button class="button button3" id = "button2">Author2</button>
 		<div id="blue" class="pattern1">
 			<!-- start: #wrapper -->
-		    <div id="wrapper">
+		    <div id="wrapper1">
 		    	<!-- start: #header -->
 		 		<header id="header">
 		        	<div class="decoration"></div>
@@ -69,10 +100,10 @@
 		                                <div class="clear"></div>
 		                            </div>
 		                            <div class="about">
-		                                <img src="" width="120" height="150" alt="Photo" class="alignleft photo">
-		                                <div class="alignright">
-		                                    <p>Hi! Everyone</p>
-		                                    <p>This is our web page for web programming final project.</p>
+		                                <img src="picture/kids2.png" width="120" height="150" alt="Photo" class="alignleft photo">
+		                                <div class="alignleft">
+		                                    <p><br>Hi! Everyone!<br>
+		                                    This is our secret closet for web programming final project.</p>
 		                                    <p>Hope you enjoy our web page. Thanks for visiting!</p>                                
 		                                </div>
 		                                <div class="clear"></div>
@@ -86,13 +117,13 @@
 		        </div>
 		    </div>
 
-	    <div id="wrapper">
+	    <div id="wrapper2">
 	        <!-- start: #header -->
 	        <header id="header">
 	            <div class="decoration"></div>
 	            <div class="clear"></div>
 	            <hgroup class="alignleft">
-	                <h1 class="arvo">Author 1</h1>
+	                <h1 class="arvo">Author 2</h1>
 	            </hgroup>
 	            <div class="social alignright">
 	                <a href="#" class="dribble" target="_blank" title="Dribble"></a>
@@ -125,11 +156,11 @@
 	                                <div class="clear"></div>
 	                            </div>
 	                            <div class="about">
-	                                <img src="" width="120" height="150" alt="Photo" class="alignleft photo">
-	                                <div class="alignright">
-	                                    <p>Hi! Everyone</p>
-	                                    <p>This is our web page for web programming final project.</p>
-	                                    <p>Hope you enjoy our web page & the secret closet. Thanks for visiting!</p>                                
+	                                <img src="picture/kid.png" width="120" height="150" alt="Photo" class="alignleft photo">
+	                                <div class="alignleft">
+	                                    <p><br>Hello! Everyone!<br>
+		                                    This is our web page for web programming final project.</p>
+		                                <p>Hope you enjoy our web page.</p>
 	                                </div>
 	                                <div class="clear"></div>
 	                            </div>
