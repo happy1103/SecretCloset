@@ -19,11 +19,13 @@ div.clear20{ clear: both; height: 20px; }
 
 /* General Styles */
 
-body{ font: 12px Verdana, Geneva, sans-serif; color: #fff; }
-#wrapper{ width: 700px; margin: 30px auto; position: relative; overflow: hidden; }
+body{ font: 12px Verdana, Geneva, sans-serif; color: black; }
+#wrapper1{ width: 700px; margin: 30px auto; position: relative; overflow: hidden; }
+#wrapper2{ width: 700px; margin: 30px auto; position: relative; overflow: hidden; }
 div.content{ position: relative; border-top: 1px solid; border-bottom: 1px solid; }
 div.slider{ width: 700px; overflow: hidden; }
-div.slider ul.wrapper, div.slider ul.wrapper li.box{ display: block; position: relative; }
+div.slider ul.wrapper1, div.slider ul.wrapper1 li.box{ display: block; position: relative; }
+div.slider ul.wrapper2, div.slider ul.wrapper2 li.box{ display: block; position: relative; }
 
 #home, #resume, #portfolio, #contact{ width: 640px; padding: 25px 30px; position: relative; }
 #portfolio{ padding-top: 5px; }
