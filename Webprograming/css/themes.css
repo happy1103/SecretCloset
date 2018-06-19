@@ -7,7 +7,8 @@
 #blue div.decoration{ background-color: #4bec3c; }
 #blue div.social a{ background: url(../picture/social-blue.png) no-repeat; }
 /* General Styles */
-#blue #wrapper{ background: lightblue repeat;}
+#blue #wrapper1{ background: lightblue repeat;}
+#blue #wrapper2{ background: lightblue repeat;}
 #blue *{ border-color: #27A7D3 !important; }
 #blue div.border{ background-color: #27A7D3; }
 #blue a{ color: #E6E6E6; }
