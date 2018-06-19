@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link type="text/css" rel="stylesheet" href="store/css/dmaku.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+		<title>Store</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="picture/title.png">
+		<link rel="stylesheet" href="css/ststyle.css">
+
+		<script type="text/javascript" src="store/js/jquery.min.js"></script>
+		<script type="text/javascript" src="store/js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="store/js/jquery.mixitup.min.js"></script>
+		
+		
+		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				var filterList = {
+
+					init:function(){
+						// MixItUp plugin
+						$('#portfoliolist').mixitup({
+							targetSelector: '.portfolio',
+							filterSelector: '.filter',
+							effects: ['fade'],
+							easing: 'snap',
+							// call the hover effect
+							onMixEnd: filterList.hoverEffect()
+						});				
+
+					},
+					
+					hoverEffect:function(){
+						// Simple parallax effect
+						$('#portfoliolist .portfolio').hover(function(){
+							$(this).find('.label').stop().animate({bottom:0},200,'easeOutQuad');
+							$(this).find('img').stop().animate({top:-30},500,'easeOutQuad');				
+						},function(){
+							$(this).find('.label').stop().animate({bottom:-40},200,'easeInQuad');
+							$(this).find('img').stop().animate({top:0},300,'easeOutQuad');								
+						});				
+					}
+
+				};
+
+				// Run the show!
+				filterList.init();
+				
+			});	
+		</script>
+	</head>
+	<style>
+		body {
+			font-family: Microsoft JhengHei;
+			background-image: url(picture/s.png);
+			
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+		}
+	</style>
+	<body>
+
+		<div class="container">
+
+			<ul id="filters" class="clearfix">
+				<li><span class="filter active" data-filter="western accessory japan korea mall">All</span></li>
+
+				<li><span class="filter" data-filter="japan">Japan</span></li>
+				<li><span class="filter" data-filter="korea">Korea</span></li>
+				<li><span class="filter" data-filter="western">Western</span></li>
+				<li><span class="filter" data-filter="accessory">Accessory</span></li>
+				<li><span class="filter" data-filter="mall">Mall</span></li>
+			</ul>
+			
+			<div id="portfoliolist">
+			
+				<div class="portfolio mall" data-cat="mall" > <!--蝦皮-->
+					<div class="portfolio-wrapper">
+						<a href = "https://shopee.tw/" target = "_blank"><img src="store/images/shopee.png" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">Shopee</a><span class="text-category">Mall</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio japan" data-cat="japan" > <!--UNIQLO-->
+					<div class="portfolio-wrapper">
+						<a href = "http://www.uniqlo.com/tw/" target = "_blank"><img src="store/images/uniqlo.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">UNIQLO</a><span class="text-category">Japan</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio western" data-cat="western" > <!--forever21-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.forever21.com/us/shop" target = "_blank"><img src="store/images/forever21.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">forever 21</a><span class="text-category">USA</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio accessory" data-cat="accessory" > <!--VACANZA-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.vacanza.com.tw/" target = "_blank"><img src="store/images/vacanza.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">VACANZA</a><span class="text-category">Accessory</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio mall" data-cat="mall" > <!--MOMO-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.momoshop.com.tw/main/Main.jsp" target = "_blank"><img src="store/images/momo.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">MOMO</a><span class="text-category">Taiwan</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio western" data-cat="western" > <!--ZARA-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.zara.com/tw/" target = "_blank"><img src="store/images/zara.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">ZARA</a><span class="text-category">Spain</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio western" data-cat="western" > <!--GAP-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.gap.tw/" target = "_blank"><img src="store/images/gap.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">GAP</a><span class="text-category">USA</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio korea" data-cat="korea" > <!--H:CONNECT-->
+					<div class="portfolio-wrapper">
+						<a href = "https://tw.hconnect.com/" target = "_blank"><img src="store/images/hconnect.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">H:CONNECT</a><span class="text-category">Korea</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio japan" data-cat="japan" > <!--GU-->
+					<div class="portfolio-wrapper">
+						<a href = "http://www.gu-global.com/tw/" target = "_blank"><img src="store/images/GU.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">GU</a><span class="text-category">Japan</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio western" data-cat="western" > <!--H&M-->
+					<div class="portfolio-wrapper">
+						<a href = "http://www2.hm.com/zh_asia3/index.html" target = "_blank"><img src="store/images/hm.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">H&M</a><span class="text-category">Sweden</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio korea" data-cat="korea" > <!--EYESCREAM-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.eyescream.com.tw/" target = "_blank"><img src="store/images/EYESCREAM.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">EYESCREAM</a><span class="text-category">Korea</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio accessory" data-cat="accessory" > <!--adidas-->
+					<div class="portfolio-wrapper">
+						<a href = "http://www.adidasoriginals-lookbook.com.tw/index.php" target = "_blank"><img src="store/images/adidas.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">adidas</a><span class="text-category">Shoes</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio western" data-cat="western" > <!--roots-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.roots.com.tw/" target = "_blank"><img src="store/images/roots.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">Roots</a><span class="text-category">Canada</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio mall" data-cat="mall" > <!--MUJI-->
+					<div class="portfolio-wrapper">
+						<a href = "http://www.muji.com/tw/" target = "_blank"><img src="store/images/MUJI.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">MUJI無印良品</a><span class="text-category">Japan</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio japan" data-cat="japan" > <!--URBAN RESEARCH-->
+					<div class="portfolio-wrapper">
+						<a href = "https://www.urban-research.tw/" target = "_blank"><img src="store/images/URBANRESEARCH.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">URBAN RESEARCH</a><span class="text-category">Japan</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portfolio accessory" data-cat="accessory" > <!--HUNTISM-->
+					<div class="portfolio-wrapper">
+						<a href = "http://www.huntism.com/" target = "_blank"><img src="store/images/HUNTISM.jpg" alt="" /></a>
+						<div class="label">
+							<div class="label-text"><a class="text-title">HUNTISM</a><span class="text-category">Hats</span></div>
+							<div class="label-bg"></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="sucaihuo-container">
+			<section class="cd-section">
+				<a class="cd-bouncy-nav-trigger" href="#0">MENU</a>
+			</section> 
+
+			<div class="cd-bouncy-nav-modal">
+				<nav>
+					<ul class="cd-bouncy-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="girl.html">Girl's</a></li>
+						<li><a href="Boy.html">Boy's</a></li>
+						<li><a href="information.html">Info</a></li>
+						<li><a href="Video.html">Video</a></li>
+						<li><a href="Producer.html">Producer</a></li>
+					</ul>
+				</nav>
+				<a href="#0" class="cd-close">Close modal</a>
+			</div>
+		</div>
+	</body>
+</html>

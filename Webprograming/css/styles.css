@@ -1,0 +1,85 @@
+@import url('themes.css');
+
+/* Reset */
+ 
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, input, form{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+  
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+html, textarea{ overflow: auto; }
+ul{ list-style: none; }
+a{ text-decoration: none; outline: 0; }
+input, textarea{ margin: 0; padding: 0; border: 0; outline: 0; }
+input[type=button], input[type=submit]{ cursor: pointer; }
+h1, h2, h3, h4, h5, h6{ font-weight: normal; }
+div.clear{ clear: both; height: 0; }
+div.clear20{ clear: both; height: 20px; }
+ 
+/* End Patterns */
+
+/* General Styles */
+
+body{ font: 12px Verdana, Geneva, sans-serif; color: #fff; }
+#wrapper{ width: 700px; margin: 30px auto; position: relative; overflow: hidden; }
+div.content{ position: relative; border-top: 1px solid; border-bottom: 1px solid; }
+div.slider{ width: 700px; overflow: hidden; }
+div.slider ul.wrapper, div.slider ul.wrapper li.box{ display: block; position: relative; }
+
+#home, #resume, #portfolio, #contact{ width: 640px; padding: 25px 30px; position: relative; }
+#portfolio{ padding-top: 5px; }
+
+h1, h2, h3, h4, h5, h6{ font-family: 'Arvo', Verdana, Geneva, sans-serif; padding-top: 25px; }
+div.content h1{ font-size: 18px; }
+div.content h2{ font-size: 16px; }
+div.content h3{ font-size: 12px; }
+div.content h4{ font-size: 11px; }
+div.content h5{ font-size: 10px; }
+div.content h6{ font-size: 8px; }
+
+.alignleft{ float: left; }
+.alignright{ float: right; }
+img.alignleft{ margin-right: 25px; }
+img.alignright{ margin-left: 25px; }
+p{ padding-bottom: 20px; }
+.np{ padding: 0 !important; } /* np = nopadding fixes incorrect placement */
+div.border{ position: absolute; width: 1px; top: 0px; height: 100%; }
+
+ul.info{ padding-top: 25px; }
+ul.info li{ margin-top: 8px; }
+ul.info li:first-child{ margin-top: 0px; }
+ul.info li span.title{ font-family: 'Arvo', Verdana, Geneva, sans-serif; margin-right: 15px; }
+
+/* End General Styles */
+
+/* Header */
+
+#header{ padding: 0 30px; }
+#header img.movil-photo{ display: none; }
+#header hgroup h1{ padding-top: 37px; font-size: 40px; }
+#header hgroup h2{ font: 14px Verdana, Geneva, sans-serif; color: #fff; padding: 0; }
+#header a.download{
+	display: block;
+	height: 20px;
+	font-size: 9px;
+	line-height: 20px;
+	padding: 0 10px;
+	float: left;
+	margin: 45px 0 0 20px;
+	text-align: center;
+}
+#header div.decoration{ width: 29px; height: 8px; position: absolute; top: 0px; right: 30px; }
+#header div.social{ margin-top: 40px; }
+#header div.social a{ display: block; width: 24px; height: 24px; float: left; margin-left: 5px; }
+#header div.social a.flickr{ background-position: -24px 0; }
+#header div.social a.twitter{ background-position: -48px 0; }
+#header div.social a.facebook{ background-position: -72px 0; }
+
+/* End Header */
+
+/* Home */
+
+#home div.border{ left: 310px; }
+#home div.about{ width: 320px; float: right; padding-left: 30px; font-size: 11px; }
+#home div.about div.alignright{ width: 175px; }
+
+/* End Home */

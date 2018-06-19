@@ -1,0 +1,21 @@
+/* CSS Document */
+
+/* Blue Theme */
+
+/* Header */
+#blue #header hgroup h1{ color: #FFFF00; }
+#blue div.decoration{ background-color: #4bec3c; }
+#blue div.social a{ background: url(../picture/social-blue.png) no-repeat; }
+/* General Styles */
+#blue #wrapper{ background: lightblue repeat;}
+#blue *{ border-color: #27A7D3 !important; }
+#blue div.border{ background-color: #27A7D3; }
+#blue a{ color: #E6E6E6; }
+#blue a.current{ color: #FFFF00 !important; }
+#blue ul.info li span.title{ color: #00CCFF; }
+#blue div.content h1, #blue div.content h2, #blue div.content h3,
+#blue div.content h4, #blue div.content h5, #blue div.content h6{ color: #00CCFF; }
+/* Contact */
+#blue #contact input.send{ background: #27A7D3; }
+
+/* End Blue Theme */

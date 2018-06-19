@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<title>Information</title>
+		<link rel="shortcut icon" href="picture/title.png">
+		<link rel="stylesheet" href="css/istyle.css">
+		<link rel="stylesheet" href="info/css/info.css">
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+		<script src="info/js/jquery-1.7.2.min.js"></script>
+	</head>
+	<style>
+		body {
+			font-family: Microsoft JhengHei;
+			background-image: url(picture/ii.png);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+		}
+		li div {
+			font-family: 'Handlee', cursive;
+			width: 760px;
+			height: 330px;
+			padding:15px;
+		}
+		hr.style-two {
+			border: 0;
+			height: 1px;
+			background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+		}
+		.title{
+			font-family: 'Handlee', cursive;
+			text-align:center;
+			font-size: 50px;
+		}
+		.arr {
+			position:relative;
+			top:5.5px;
+		}
+		a {
+			color : white;
+		}
+	</style>
+	<body>
+		<br><p class = "title">INTRODUCE</p> <hr class="style-two">
+		<div class="sucaihuo-container">
+			<section class="cd-section">
+				<a class="cd-bouncy-nav-trigger" href="#0">MENU</a>
+			</section> 
+
+			<div class="cd-bouncy-nav-modal">
+				<nav>
+					<ul class="cd-bouncy-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="girl.html">Girl's</a></li>
+						<li><a href="Boy.html">Boy's</a></li>
+						<li><a href="Video.html">Video</a></li>
+						<li><a href="Store.html">Store</a></li>
+						<li><a href="Producer.html">Producer</a></li>
+					</ul>
+				</nav>
+				<a href="#0" class="cd-close">Close modal</a>
+			</div>
+		</div>
+		
+		<div>
+			<div class="container clearfix teachers_b">
+				<div class="slide" id="slide">
+					<ul style = "text-align:center;">
+						<li class = "back_r"> <div><p style = "font-size: 50px; color:#750909;">♥ My Secret Closet</p><hr class="style-two">
+							<p style = "font-family: Microsoft JhengHei; color: #4f0000; line-height: 23px;">
+							你有在網上搭配過服飾嗎?<br>
+							有注意到自己每天都在穿同樣的衣服嗎?<br>
+							Secret Closet幫你從web上提供100萬件服飾<br>
+							你不用再花大筆時間 最後又做醜倒掉渣搭配<br>
+							上Secret Closet選擇想要的品項<br>
+							決定服裝與適合的配件 然後按下確定<br>
+							就是這麼簡單<br>
+							你可以以最輕鬆的心情 做出最完美的搭配<br>
+							找衣櫃? <a href = "index.html"><img src = "picture/go.png" style = "width: 30px; height: 27px;" class = "arr"> Secret Closet<br></a>
+							</p>
+							</div> </li>
+						<li class = "back_b"> <div><p style = "font-size: 50px; color:#ffffff;">Closet</p><hr class="style-two">
+							<img src = "picture/step1.png" style = "width: 400px; height: 180px;">
+							<a href = "girl.html"><div>Girls in <img src = "picture/go.png" style = "width: 30px; height: 27px;" class = "arr"></a>
+							<a href = "Boy.html">   Boys in <img src = "picture/go.png" style = "width: 30px; height: 27px;" class = "arr"></div></a>
+							</div> </li>
+							
+						<li class = "back_g"> <div><p style = "font-size: 50px; color:#0e5122;">Video</p><hr class="style-two">
+							<img src = "picture/infoV.jpg" style = "width: 100%; height: 50%;">
+							<br><br><p style = "font-family: Microsoft JhengHei; color: #003311">Video幫你又快又簡單的找到最新潮的搭配技巧，讓您輕鬆省頭腦</p>
+							<a href = "Video.html"><div>START <img src = "picture/go.png" style = "width: 30px; height: 27px;" class = "arr"></div></a>
+							</div> </li>
+						<li class = "back_y"> <div><p style = "font-size: 50px; color:#f99a25;">Store</p><hr class="style-two">
+							<img src = "picture/infoS.jpg" style = "width: 100%; height: 50%;">
+							<br><br><p style = "font-family: Microsoft JhengHei; color: #d86324">Store提供數百個品牌與網路商城，秀給您時下最夯的商店</p>
+							<a href = "Store.html"><div>START <img src = "picture/go.png" style = "width: 30px; height: 27px;" class = "arr"></div></a>
+							</div> </li>
+								
+					</ul>
+					<div class="arrow">
+						<div class="prev"><</div>
+						<div class="next">></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function () {
+				var datas = [
+					{'z-index': 6, opacity: 1, width: 760, height: 330, top: 40, left: 0},
+					{'z-index': 3, opacity: 0.4, width: 480, height: 203, top: -10, left: -170},
+					{'z-index': 2, opacity: 0.2, width: 620, height: 269, top: -60, left: 110},
+					{'z-index': 3, opacity: 0.4, width: 480, height: 203,  top: -10, left: 430},
+				]
+				move();
+
+				function move() {
+					
+					for (var i = 0; i < datas.length; i++) {
+						var data = datas[i];
+						$('#slide ul li').eq(i).css('z-index',data['z-index']);
+						$('#slide ul li').eq(i).stop().animate(data, 1200);
+					}
+				}
+
+				$('.prev').on('click', function () {
+					var last = datas.pop();
+					datas.unshift(last);
+
+					move();
+				})
+
+				function nextYewu(){
+					var first = datas.shift();
+					datas.push(first);
+					move();
+				}
+				$('.next').on('click', nextYewu);
+
+				var timer = setInterval(function(){
+					nextYewu();
+				},5000);
+				
+				$('#slide').on({
+					mouseenter: function () {
+						$('.arrow').css('display', 'block');
+						clearInterval(timer);
+					}, mouseleave: function () {
+						$('.arrow').css('display', 'none');
+						clearInterval(timer);
+						timer = setInterval(function(){
+							nextYewu();
+						},5000)
+					}
+				})
+			})
+		</script>
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

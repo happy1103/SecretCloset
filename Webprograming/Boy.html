@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Boy's</title>
+		<link rel="shortcut icon" href="picture/title.png">
+		<link rel="stylesheet" href="css/girlstyle.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="button/css/buttons.css">
+		<script src="button/js/buttons.js"></script>
+	</head>
+	<style>
+		body {
+			font-family: Microsoft JhengHei;
+			background-image: url(picture/b.png);
+			
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+		}
+		body {
+			font-family: Microsoft JhengHei;
+		}
+		.picdiv{
+			width: 200px;
+			height: 85vh; 
+			border: 2px solid #007998;
+			background: #fff;
+			
+			float:left; 
+			overflow:scroll;
+			padding: 5px;
+			position: absolute;
+			top: 25px;
+			left: 200px;
+		}
+		.maindiv{
+			width: 400px;
+			height: 500px; 
+			border: 1px solid; 
+			position: absolute;
+			left: 500px;
+			top: 10px;		
+		}
+		.sdiv{
+			width: 145px;
+			height: 5px; 
+			
+			position: absolute;
+			left: 123px;
+			top: 113px;
+			z-index : 100;
+		}
+		.ldiv{
+			width: 170px;
+			height: 5px; 
+			 
+			position: absolute;
+			left: 112px;
+			top: 204px;
+			z-index : 10;
+		}
+		.fdiv{
+			width: 130px;
+			height: 5px; 
+			border: 1px solid; 
+			position: absolute;
+			left: 133px;
+			top: 476px;
+			z-index : 5;
+		}
+		
+		.longdiv{
+			width: 145px;
+			height: 5px; 
+			
+			position: absolute;
+			left: 123px;
+			top: 121px;
+		}
+		
+		.coatdiv{
+			width: 145px;
+			height: 5px; 
+			
+			position: absolute;
+			left: 124px;
+			top: 94px;
+			z-index : 200;
+		}
+		
+		.sockdiv{
+			width: 170px;
+			height: 5px; 
+			
+			position: absolute;
+			left: 112px;
+			top: 224px;
+			z-index : 1;
+		}
+		
+		img {
+			width:100%
+		}
+		p {
+			font-size: 18px;
+			padding: 3px;
+		}
+		
+		.picdis{
+			width: 800px; 
+			height: 520px; 
+			position:absolute; 
+			top: 30px; 
+			left: 250px; 
+			background-color: #ffffff; 
+			opacity: 0.9; 
+			border: 1px solid;
+			z-index: 300; 
+			align: center;
+			display: none;
+		}
+	</style>
+	<script>
+		var pictop = [ "班 服", "短袖灰"];
+		var picleg = [ "長牛仔", "迷彩褲" ];
+		var picshoe = [  ];
+		var piccoat = [ "無東西", "紅外套", "藍外套", "灰大衣"];
+		var piclong = [  ];
+		var picsock = [ "無東西" ];
+		
+		var topadded = 0;
+		var pantadded = 0;
+		var shoesadded = 0;
+		var coatadded = 0;
+		var longadded = 0;
+		var sockadded = 0;
+		
+		$(document).ready(function(){
+			$("#top").on('click', function(){
+				//$("#distop").attr("style","display: blank");
+				$("#disleg").attr("style","display: none");
+				$("#disfoot").attr("style","display: none");
+				$("#dislong").attr("style","display: none");
+				$("#discoat").attr("style","display: none");
+				$("#dissock").attr("style","display: none");
+				$("#distop").toggle();
+				//$("#disleg").toggle();
+				if(topadded == 0)
+				{
+					for(var i=0;i<pictop.length;i++)
+					{
+						topadded = 1;
+						$("#distop").append('<img id = "top'+ pictop[i] +'" src = "boy/' + pictop[i] + '.png"><br>');
+					}
+				}
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#pants").on('click', function(){
+				$("#distop").attr("style","display: none");
+				//$("#disleg").attr("style","display: blank";
+				$("#disfoot").attr("style","display: none");
+				$("#dislong").attr("style","display: none");
+				$("#discoat").attr("style","display: none");
+				$("#dissock").attr("style","display: none");
+				$("#disleg").toggle();
+				if(pantadded == 0)
+				{
+					for(var i=0;i<picleg.length;i++)
+					{
+						pantadded = 1;
+						$("#disleg").append('<img id = "leg'+ picleg[i] +'" src = "boy/' + picleg[i] + '.png"><br>');
+					}
+				}
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#shoes").on('click', function(){
+				//$("#disfoot").attr("style","display: blank");
+				$("#distop").attr("style","display: none");
+				$("#disleg").attr("style","display: none");
+				$("#dislong").attr("style","display: none");
+				$("#discoat").attr("style","display: none");
+				$("#dissock").attr("style","display: none");
+				$("#disfoot").toggle();
+				if(shoesadded == 0)
+				{
+					for(var i=0;i<picshoe.length;i++)
+					{
+						shoesadded = 1;
+						$("#disfoot").append('<img id = "shoe'+ picshoe[i] +'" src = "boy/' + picshoe[i] + '.png"><br>');
+					}
+				}
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#suit").on('click', function(){
+				$("#disfoot").attr("style","display: none");
+				$("#distop").attr("style","display: none");
+				$("#disleg").attr("style","display: none");
+				$("#discoat").attr("style","display: none");
+				$("#dissock").attr("style","display: none");
+				$("#dislong").toggle();
+				if(longadded == 0)
+				{
+					for(var i=0;i<piclong.length-1;i++)
+					{
+						longadded = 1;
+						$("#dislong").append('<img id = "log'+ piclong[i] +'" src = "boy/' + piclong[i] + '.png"><br>');
+					}
+				}
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#coats").on('click', function(){
+				$("#disfoot").attr("style","display: none");
+				$("#distop").attr("style","display: none");
+				$("#disleg").attr("style","display: none");
+				$("#dislong").attr("style","display: none");
+				$("#dissock").attr("style","display: none");
+				$("#discoat").toggle();
+				if(coatadded == 0)
+				{
+					for(var i=1;i<piccoat.length;i++)
+					{
+						coatadded = 1;
+						$("#discoat").append('<img id = "coat'+ piccoat[i] +'" src = "boy/' + piccoat[i] + '.png"><br>');
+					}
+				}
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#socks").on('click', function(){
+				$("#distop").attr("style","display: none");
+				$("#disleg").attr("style","display: none");
+				$("#disfoot").attr("style","display: none");
+				$("#dislong").attr("style","display: none");
+				$("#discoat").attr("style","display: none");
+				$("#dissock").toggle();
+				if(sockadded == 0)
+				{
+					for(var i=1;i<picsock.length;i++)
+					{
+						sockadded = 1;
+						$("#dissock").append('<img id = "sock'+ picsock[i] +'" src = "boy/' + picsock[i] + '.png"><br>');
+					}
+				}
+				});
+		});
+		
+		$(document).ready(function(){
+			$("#remove").on('click', function(){
+				$("img").each(function(){
+					var id = $(this).attr("id");
+					if(id.indexOf("on")!=-1)
+					{
+						$(this).remove();
+					}
+				})
+			})
+		});
+		
+		$(document).ready(function(){
+			$("#remove").on('click', function(){
+				$("p").each(function(){
+					var id = $(this).attr("id");
+					if(id.indexOf("on")!=-1)
+					{
+						$(this).remove();
+					}
+				})
+			})
+		});
+		
+		$(document).ready(function(){
+			$("#remove").on('click', function(){
+				$("#distop").attr("style","display: none");
+				$("#disleg").attr("style","display: none");
+				$("#disfoot").attr("style","display: none");
+				$("#dislong").attr("style","display: none");
+				$("#discoat").attr("style","display: none");
+				$("#dissock").attr("style","display: none");
+			})
+		});
+		
+		$(document).ready(function(){
+			$("#random").on('click', function(){
+				$("#distop").attr("style","display: none");
+				$("#disleg").attr("style","display: none");
+				$("#disfoot").attr("style","display: none");
+				$("#dislong").attr("style","display: none");
+				$("#discoat").attr("style","display: none");
+				$("#dissock").attr("style","display: none");
+			})
+		});
+		
+		$(document).ready(function(){
+			$("#random").on('click', function(){
+				$("p").each(function(){
+					var id = $(this).attr("id");
+					if(id.indexOf("on")!=-1)
+					{
+						$(this).remove();
+					}
+				})
+			})
+		});
+		
+		$(document).ready(function(){
+			$("#random").on('click', function(){
+			
+				$("img").each(function(){
+					var id = $(this).attr("id");
+					if(id.indexOf("on")!=-1)
+					{
+						$(this).remove();
+					}
+				})
+				
+				var suit = Math.floor( 1 + Math.random() * 2 );
+			
+				if(suit==1)
+				{
+					var ltop = pictop.length;
+					var lleg = picleg.length;
+					var lshoe = picshoe.length;
+					var lcoat = piccoat.length;
+					var lsock = picsock.length;
+					//var llong = piclong.length;
+					
+					var rtop = Math.floor( Math.random() * ltop );
+					var rleg = Math.floor( Math.random() * lleg );
+					var rshoe = Math.floor( Math.random() * lshoe );
+					var rcoat = Math.floor( Math.random() * lcoat );
+					var rsock = Math.floor( Math.random() * lsock );
+					//var rlong = Math.floor( Math.random() * llong );
+					
+					$("#shoulder").append('<img id = "on' + '" src = "boy/' + pictop[rtop] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+					$("#dressed").append('<p id = "on' + pictop[rtop] + '">' + pictop[rtop] + '</p>');
+					
+					$("#leg").append('<img id = "on' + '" src = "boy/' + picleg[rleg] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+					$("#dressed").append('<p id = "on' + picleg[rleg] + '">' + picleg[rleg] + '</p>');
+					
+					$("#foot").append('<img id = "on' + '" src = "boy/' + picshoe[rshoe] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
+					$("#dressed").append('<p id = "on' + picshoe[rshoe] + '">' + picshoe[rshoe] + '</p>');
+					
+					$("#coat").append('<img id = "on' + '" src = "boy/' + piccoat[rcoat] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+					if(rcoat!=0)
+						$("#dressed").append('<p id = "on' + piccoat[rcoat] + '">' + piccoat[rcoat] + '</p>');
+					
+					$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+					if(rsock!=0)
+					{
+						$("#dressed").append('<p id = "on' + picsock[rsock] + '">' + picsock[rsock] + '</p>');
+					}
+					//$("#long").append('<img id = "on' + '" src = "' + piclong[rlong] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+				}
+				else{
+					var llong = piclong.length;
+					var lshoe = picshoe.length;
+					var lcoat = piccoat.length;
+					var lsock = picsock.length;
+					
+					var rlong = Math.floor( Math.random() * llong );
+					var rshoe = Math.floor( Math.random() * lshoe );
+					var rcoat = Math.floor( Math.random() * lcoat );
+					var rsock = Math.floor( Math.random() * lsock );
+					
+					if(rlong==llong-1)
+					{
+						$("#long").append('<img id = "on' + '" src = "boy/' + piclong[rlong] + '.png"  style = "position : absolute; top: 0px; left:0px; z-index: 190";>');
+						$("#dressed").append('<p id = "on' + piclong[rlong] + '">' + piclong[rlong] + '</p>');
+					}
+					else
+					{
+						$("#foot").append('<img id = "on' + '" src = "boy/' + picshoe[rshoe] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
+						$("#dressed").append('<p id = "on' + picshoe[rshoe] + '">' + picshoe[rshoe] + '</p>');
+						
+						if(piclong[rlong]=="吊帶褲")
+						{
+							var ltop = pictop.length;
+							var rtop = Math.floor( Math.random() * ltop );
+							$("#shoulder").append('<img id = "on' + '" src = "boy/' + pictop[rtop] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+							$("#dressed").append('<p id = "on' + pictop[rtop] + '">' + pictop[rtop] + '</p>');
+							
+							$("#long").append('<img id = "on' + '" src = "boy/' + piclong[rlong] + '.png"  style = "position : absolute; top: 0px; left:0px; z-index: 190";>');
+							$("#dressed").append('<p id = "on' + piclong[rlong] + '">' + piclong[rlong] + '</p>');
+						}
+						else
+						{
+							$("#long").append('<img id = "on' + '" src = "boy/' + piclong[rlong] + '.png"  style = "position : absolute; top: 0px; left:0px; z-index : 90;">');
+							$("#dressed").append('<p id = "on' + piclong[rlong] + '">' + piclong[rlong] + '</p>');
+						}
+						
+						$("#coat").append('<img id = "on' + '" src = "boy/' + piccoat[rcoat] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+						if(rcoat!=0)
+							$("#dressed").append('<p id = "on' + piccoat[rcoat] + '">' + piccoat[rcoat] + '</p>');
+						
+						$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+						if(rsock!=0)
+							$("#dressed").append('<p id = "on' + picsock[rsock] + '">' + picsock[rsock] + '</p>');
+					}
+				}
+			})
+		});
+		
+		$(document).on('click', 'img', function(){
+			console.log("click");
+			var idd = $(this).attr("src");
+			var id = $(this).attr("id");
+			if(id.indexOf("on")!=-1)
+			{
+				var img = $(this);
+				var name = idd.substring(4,7);
+				//console.log(name);
+				$(this).remove();
+				$("p").each(function()
+				{
+					var item = $(this).attr("id");
+					//console.log(item.indexOf(name));
+					if(item.indexOf(name)!=-1)
+					{
+						$(this).remove();
+						return false;
+					}
+				})
+			}
+			else if(id.indexOf("top")!=-1)
+			{
+				$("#shoulder").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; top: 0px; left:0px;">');
+				$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
+			}
+			else if(id.indexOf("leg")!=-1)
+			{
+				$("#leg").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; top: 0px; left:0px;">');
+				$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
+			}
+			else if(id.indexOf("shoe")!=-1)
+			{
+				$("#foot").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; bottom: 0px; left:0px;">');
+				$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
+			}
+			else if(id.indexOf("log")!=-1)
+			{
+				console.log(idd);
+				if(idd.indexOf("吊帶褲")!=-1)
+				{
+					$("#long").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; top: 0px; left:0px; z-index: 190";>');
+					$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
+				}
+				else
+				{
+					$("#long").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; top: 0px; left:0px; z-index : 90;">');
+					$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
+				}
+			}
+			else if(id.indexOf("coat")!=-1)
+			{
+				$("#coat").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; top: 0px; left:0px;">');
+				$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
+			}
+			else if(id.indexOf("sock")!=-1)
+			{
+				$("#sock").append('<img id = "on' + '" src = "' + idd + '" style = "position : absolute; top: 0px; left:0px;">');
+				$("#dressed").append('<p id = "on' + idd.substring(4,7) + '">' + idd.substring(4,7) + '</p>');
+			}
+		});
+		
+		//$('#main').on('click', '.item', function()
+		
+		/*$(document).on('click', 'img', function(){
+			$(this).click(function(){
+				alert($(this).attr('id'));
+				
+				});
+		});*/
+		
+  
+	</script>
+	<body>
+		<div class="sucaihuo-container" style = "z-index: 2000">
+			<section class="cd-section">
+				<a class="cd-bouncy-nav-trigger" href="#0">MENU</a>
+			</section> 
+
+			<div class="cd-bouncy-nav-modal">
+				<nav>
+					<ul class="cd-bouncy-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="girl.html">Girl's</a></li>
+						<li><a href="information.html">Info</a></li>
+						<li><a href="Video.html">Video</a></li>
+						<li><a href="Store.html">Store</a></li>
+						<li><a href="Producer.html">Producer</a></li>
+					</ul>
+				</nav>
+				<a href="#0" class="cd-close">Close modal</a>
+			</div>
+		</div>
+
+
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/main.js"></script>
+		
+		<div style = "width: 100hv; height: 100hv; float:left; padding: 5px; position:absolute; top: 20px; left: 20px;">
+			<button class="button button-border-primary button-rounded" id = "top">Tops</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "coats">Coats</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "suit">Dress</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "pants">Pants</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "socks">Sock</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "shoes">Shoes</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "random">random select</button><br><br>
+			<button class="button button-border-primary button-rounded" id = "remove">Remove All</button><br><br>
+			<!-- <button class="button button-border-primary button-rounded" id = "change">轉成圖檔</button><br> -->
+		</div>
+
+		<div id = "distop" style = "display: none;" class = "picdiv" align="center"></div>
+		<div id = "disleg" style = "display: none;" class = "picdiv" align="center"></div>
+		<div id = "disfoot" style = "display: none;" class = "picdiv" align="center"></div>
+		<div id = "dislong" style = "display: none;" class = "picdiv" align="center"></div>
+		<div id = "discoat" style = "display: none;" class = "picdiv" align="center"></div>
+		<div id = "dissock" style = "display: none;" class = "picdiv" align="center"></div>
+		
+		
+			<div id = "main" class = "maindiv" style = "display: blank;">
+				<img id = "back" src = "boy/bmodel.png" width = "400px" height = "498px">
+				<div id = "shoulder" class = "sdiv"></div>
+				<div id = "leg" class = "ldiv"></div>
+				<div id = "foot" class = "fdiv"></div>
+				<div id = "long" class = "longdiv"></div>
+				<div id = "coat" class = "coatdiv"></div>
+				<div id = "sock" class = "sockdiv"></div>
+			</div>
+		
+	
+		<!-- <div id = "picdis" class = "picdis"></div> -->
+		
+		<div style = "width: 250px; height: 180px; position:absolute; top: 20px; left: 950px; background-color: #ffffff; opacity: 0.7; border: 1px solid;"></div>
+		<div style = "width: 250px; height: 180px; position:absolute; top: 20px; left: 950px; color: black; z-index:10; padding: 18px;">
+			☆功能：<br><br>
+			1.點選選單內的衣物可以試穿<br><br>
+			2.點選身上的衣物可以脫去<br><br>
+			3.random可做隨機搭配<br><br>
+			4.remove all可以清空試穿
+		</div>
+		
+		
+		<div style = "position:absolute; top: 220px; left: 955px; color: black;">目前穿著：</div>
+		<div style = "width: 250px; height: 170px; position:absolute; top: 250px; left: 950px; background-color: #ffffff; opacity: 0.7; border: 1px solid;"></div>
+		<div id = "dressed" style = "width: 250px; height: 170px; position:absolute; top: 250px; left: 950px; color: black; z-index:10; overflow:scroll; padding:18px;">
+		</div>
+		
+		<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.js "></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js "></script>
+		<script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+		<script>
+			$("#change").click(function() {
+				$("#picdis").toggle();
+					html2canvas($("table")[0]).then(function(canvas) {
+						var $div = $("fieldset div");
+						$div.empty();
+						$("<img />", { src: canvas.toDataURL("image/png") }).appendTo($div);
+					});
+			});
+		  </script> -->
+	</body>
+</html>
