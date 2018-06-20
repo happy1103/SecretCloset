@@ -33,7 +33,7 @@
     </script>
 
 	<body>
-	<div id="iRFloating" style="position:absolute;top:100;left:10;">
+	<div id="ct0" style = "width: 100hv; height: 30px; position: absolute; top: 10px;" align = "center">
 		<a href="#ct1">牛仔褲裝搭法</a>
 		<a href="#ct2">春日最佳搭配</a>
 		<a href="#ct3">夏日街頭穿搭</a>
@@ -78,6 +78,7 @@
 			<p class="title">如何用兩條牛仔褲穿出一個禮拜的穿搭</p>
 			<div class='video' align="center">
 				<iframe src='https://www.youtube.com/embed/lmlqoI1M1rI' frameborder='0' allowfullscreen height="450" width = "650"></iframe>
+				<br><a href="#ct0">back to top</a>
 			</div>		
 		</div>
 
@@ -86,6 +87,7 @@
 			<p  class="title">6種春日穿搭分享</p>
 			<div class='video' align="center">
 				<iframe src='https://www.youtube.com/embed/iBdD7_87Rhs' frameborder='0' allowfullscreen height="450" width = "650"></iframe>
+				<br><a href="#ct0">back to top</a>
 			</div>
 		</div>
 		<br><br>
@@ -93,61 +95,12 @@
 			<p class="title">夏日街頭風穿搭 必備4單品</p>
 			<div class='video' align="center">
 				<iframe src='https://www.youtube.com/embed/36MVsBHIg2c' frameborder='0' allowfullscreen height="450" width = "650"></iframe>
+				<br><a href="#ct0">back to top</a>
 			</div>
 		</div>
 
 </div>
 		<script src="js/jquery-2.1.1.js"></script>
 		<script src="js/main.js"></script>
-		<script>
-
-		  adWidth = 160;//廣告寬度
-
-		  nowX = 1000;//目前位置(left)
-		  nowY = 100;//目前位置(top)
-
-		  fad_style = document.getElementById('iRFloating').style;
-
-		  function fadIni()
-		  {
-			  innerWidth = document.body.clientWidth;
-			  innerHeight = document.body.clientHeight;
-		  
-			  edge = (innerWidth-1000)/2;
-		  
-			  if( edge > adWidth )
-			  {
-				  posX = edge + 1000;
-			  }
-			  else
-			  {
-				  posX = innerWidth-adWidth;
-			  }
-		  
-			  posY = 100;
-		  
-		  }
-		  function fadRefresh()
-		  {
-			  offsetX = posX + document.body.scrollLeft - nowX;
-			  offsetY = posY + document.body.scrollTop - nowY;
-			  nowX += offsetX / 5;
-			  nowY += offsetY / 5;
-			  fad_style.left = nowX;
-			  fad_style.top = nowY;
-		  
-			  floatID = setTimeout('fadRefresh()', 20 );//Refresh時間
-		  }
-		  
-		  function fadStart()
-		  {
-			  fadIni();
-			  window.onresize=fadIni;
-			  fadRefresh();
-		  }
-		  
-		  fadStart();
-
-		</script>
 	</body>
 </html>
