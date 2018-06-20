@@ -11,7 +11,7 @@
 #blue #wrapper2{ background: lightblue repeat;}
 #blue *{ border-color: #27A7D3 !important; }
 #blue div.border{ background-color: #27A7D3; }
-#blue a{ color: #E6E6E6; }
+#blue a{ color: blue; }
 #blue a.current{ color: #FFFF00 !important; }
 #blue ul.info li span.title{ color: #00CCFF; }
 #blue div.content h1, #blue div.content h2, #blue div.content h3,
