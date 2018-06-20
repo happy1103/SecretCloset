@@ -81,7 +81,7 @@
 			
 			position: absolute;
 			left: 123px;
-			top: 121px;
+			top: 103px;
 		}
 		
 		.coatdiv{
@@ -131,7 +131,7 @@
 		var picleg = [ "長牛仔", "迷彩褲" ];
 		var picshoe = [ "黃布鞋", "藍布鞋"];
 		var piccoat = [ "無東西", "紅外套", "藍外套", "灰大衣"];
-		var piclong = [  ];
+		var piclong = [ "黑西裝" ];
 		var picsock = [ "無東西", "白短襪"];
 		
 		var topadded = 0;
@@ -328,7 +328,8 @@
 					}
 				})
 				
-				var suit = 1;
+				var suit = Math.floor( 1 + Math.random() * 2 );
+			
 				if(suit==1)
 				{
 					var ltop = pictop.length;
