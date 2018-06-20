@@ -377,40 +377,33 @@
 					var rcoat = Math.floor( Math.random() * lcoat );
 					var rsock = Math.floor( Math.random() * lsock );
 					
-					if(rlong==llong-1)
+					$("#foot").append('<img id = "on' + '" src = "boy/' + picshoe[rshoe] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
+					$("#dressed").append('<p id = "on' + picshoe[rshoe] + '">' + picshoe[rshoe] + '</p>');
+					
+					if(piclong[rlong]=="吊帶褲")
 					{
+						var ltop = pictop.length;
+						var rtop = Math.floor( Math.random() * ltop );
+						$("#shoulder").append('<img id = "on' + '" src = "boy/' + pictop[rtop] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+						$("#dressed").append('<p id = "on' + pictop[rtop] + '">' + pictop[rtop] + '</p>');
+						
 						$("#long").append('<img id = "on' + '" src = "boy/' + piclong[rlong] + '.png"  style = "position : absolute; top: 0px; left:0px; z-index: 190";>');
 						$("#dressed").append('<p id = "on' + piclong[rlong] + '">' + piclong[rlong] + '</p>');
 					}
 					else
 					{
-						$("#foot").append('<img id = "on' + '" src = "boy/' + picshoe[rshoe] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
-						$("#dressed").append('<p id = "on' + picshoe[rshoe] + '">' + picshoe[rshoe] + '</p>');
-						
-						if(piclong[rlong]=="吊帶褲")
-						{
-							var ltop = pictop.length;
-							var rtop = Math.floor( Math.random() * ltop );
-							$("#shoulder").append('<img id = "on' + '" src = "boy/' + pictop[rtop] + '.png" style = "position : absolute; top: 0px; left:0px;">');
-							$("#dressed").append('<p id = "on' + pictop[rtop] + '">' + pictop[rtop] + '</p>');
-							
-							$("#long").append('<img id = "on' + '" src = "boy/' + piclong[rlong] + '.png"  style = "position : absolute; top: 0px; left:0px; z-index: 190";>');
-							$("#dressed").append('<p id = "on' + piclong[rlong] + '">' + piclong[rlong] + '</p>');
-						}
-						else
-						{
-							$("#long").append('<img id = "on' + '" src = "boy/' + piclong[rlong] + '.png"  style = "position : absolute; top: 0px; left:0px; z-index : 90;">');
-							$("#dressed").append('<p id = "on' + piclong[rlong] + '">' + piclong[rlong] + '</p>');
-						}
-						
-						$("#coat").append('<img id = "on' + '" src = "boy/' + piccoat[rcoat] + '.png" style = "position : absolute; top: 0px; left:0px;">');
-						if(rcoat!=0)
-							$("#dressed").append('<p id = "on' + piccoat[rcoat] + '">' + piccoat[rcoat] + '</p>');
-						
-						$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
-						if(rsock!=0)
-							$("#dressed").append('<p id = "on' + picsock[rsock] + '">' + picsock[rsock] + '</p>');
+						$("#long").append('<img id = "on' + '" src = "boy/' + piclong[rlong] + '.png"  style = "position : absolute; top: 0px; left:0px; z-index : 90;">');
+						$("#dressed").append('<p id = "on' + piclong[rlong] + '">' + piclong[rlong] + '</p>');
 					}
+					
+					$("#coat").append('<img id = "on' + '" src = "boy/' + piccoat[rcoat] + '.png" style = "position : absolute; top: 0px; left:0px;">');
+					if(rcoat!=0)
+						$("#dressed").append('<p id = "on' + piccoat[rcoat] + '">' + piccoat[rcoat] + '</p>');
+					
+					$("#sock").append('<img id = "on' + '" src = "boy/' + picsock[rsock] + '.png" style = "position : absolute; bottom: 0px; left:0px;">');
+					if(rsock!=0)
+						$("#dressed").append('<p id = "on' + picsock[rsock] + '">' + picsock[rsock] + '</p>');
+					
 				}
 			})
 		});
