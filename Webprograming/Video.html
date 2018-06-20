@@ -17,7 +17,31 @@
 			background-attachment: fixed;
 			background-position: left;
 			background-size: cover;
+			overflow-x: hidden;
 		}
+		.links{
+
+			position: absolute;  /* 將整個側欄釘在網頁右上角 */
+
+			top: 0px;
+
+			left: -250px;  /* 調整一下數值讓側欄露一小角在網頁上，若改成left: -250px;側欄會釘在網頁左上角 */
+
+			-webkit-transition: left 0.5s ease-out;  /* 以下四行語法會產生側欄位移動畫的效果，非必要 */
+
+			-moz-transition: left 0.5s ease-out;  /* 會有四行是因為不同瀏覽器的語法不同 */
+
+			-o-transition: left 0.5s ease-out;
+
+			transition: left 0.5s ease-out;
+
+			}
+
+			.links:hover{
+
+			left: 0px;  /* 當滑鼠經過側欄那一小角時，將整個側欄顯示出來 */
+
+			}
 	</style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,9 +56,11 @@
     </script>
 
 	<body>
+	<div class = "links">
 		<a href="#ct1">牛仔褲裝搭法</a>
 		<a href="#ct2">春日最佳搭配</a>
 		<a href="#ct3">夏日街頭穿搭</a>
+	</div>
 		<div class="sucaihuo-container">
 			<section class="cd-section">
 				<a class="cd-bouncy-nav-trigger" href="#0">MENU</a>
